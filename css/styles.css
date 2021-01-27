@@ -14,6 +14,8 @@
   --accent-color: #2196f3;
   --secondary-accent-color: rgba(255, 255, 255, 0.6);
   --background-color: #f5f4fa;
+  --border-header: #ececec;
+  --border-portfolio: #eeeeee;
 }
 
 .body {
@@ -31,12 +33,40 @@ h6 {
   font-family: Roboto, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* ======index.html======*/
@@ -44,7 +74,7 @@ a {
 /* ======header====== */
 
 .logo,
-.element-logo {
+.footer-logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -53,11 +83,51 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+.logo {
+  margin-right: 92px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 .logo-list {
   color: var(--secondary-text-color);
 }
+
 .logo-item {
   color: var(--main-background-color);
+}
+
+.header .container,
+.header-portfolio .container {
+  display: flex;
+  align-items: center;
+}
+
+.header,
+.header-portfolio {
+  margin-top: 24px;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.navigation,
+.navigation-portfolio {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list:not(:last-child) {
+  margin-right: 50px;
 }
 
 .site-nav .link {
@@ -74,6 +144,16 @@ a {
 .site-nav .link:focus,
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.address-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.mail-link {
+  margin-right: 50px;
 }
 
 .address-nav .link {
@@ -95,21 +175,36 @@ a {
 
 .hero {
   background-color: var(--secondary-background-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-container {
+  min-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
   color: var(--main-background-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
+  width: 696px;
+  height: 120px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 252px;
+  margin-right: 252px;
 }
 
-.hero .button {
+.hero-button {
   background-color: var(--accent-color);
   color: var(--main-background-color);
   cursor: pointer;
@@ -118,16 +213,31 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
+  border-radius: 4px;
+  border-color: transparent;
   text-align: center;
   letter-spacing: 0.06em;
+  min-width: 200px;
+  padding: 10px 32px;
 }
 
 /* =====section===== */
 
 .section {
   background-color: var(--main-background-color);
+}
+
+.container-title {
+  display: flex;
+  text-align: left;
+}
+
+.container-title > li {
+  width: calc((100%- (3 * 30px)) / 4);
+}
+
+.container-title > li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-title {
@@ -139,6 +249,9 @@ a {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-top: 94px;
+  margin-bottom: 10px;
+  width: 270px;
 }
 
 .section-text {
@@ -149,6 +262,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  width: 270px;
 }
 
 .section-work {
@@ -160,10 +274,15 @@ a {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-bottom: 50px;
 }
 
 .section-team {
   background-color: var(--background-color);
+}
+
+.container-list-team {
+  display: flex;
 }
 
 .section-images {
@@ -175,6 +294,16 @@ a {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.container-list {
+  display: flex;
+}
+
+.container-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-name {
@@ -185,6 +314,8 @@ a {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .specialisation {
@@ -195,6 +326,23 @@ a {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 124px;
+}
+
+.team-items {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  background-color: var(--title-color);
+}
+
+.team-items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-foto {
+  display: block;
 }
 
 /* portfolio */
@@ -218,6 +366,11 @@ a {
 }
 
 /* =====section==== */
+.part {
+  display: flex;
+  justify-content: center;
+  padding: 132px;
+}
 
 .part .button {
   background-color: var(--main-background-color);
@@ -230,12 +383,36 @@ a {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border: 0;
+  padding: 6px 22px;
 }
 
 .part .button:hover,
 .part .button:focus {
   background-color: var(--accent-color);
   color: var(--main-background-color);
+  border-radius: 4px;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-element {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: calc((100% - (2 * 30px)) / 3);
+  outline: 1px solid var(--border-portfolio);
+}
+
+.portfolio-element:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-cards {
+  text-align: left;
+  padding: 20px 24px;
 }
 
 .menu-title {
@@ -246,6 +423,7 @@ a {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .text-item {
@@ -260,7 +438,7 @@ a {
 
 /* ====footer=== */
 
-.element {
+.footer {
   background-color: var(--secondary-background-color);
   color: var(--main-background-color);
   font-family: Roboto, sans-serif;
@@ -269,6 +447,21 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-wrapper {
+  text-align: left;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
 }
 
 .address .link {
