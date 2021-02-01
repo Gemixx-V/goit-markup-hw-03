@@ -80,7 +80,7 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 }
 
@@ -111,8 +111,8 @@ a {
   display: flex;
   align-items: center;
 }
-.nav-link,
-.navigation-list {
+
+.nav-link {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -134,6 +134,8 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav .link:hover,
@@ -192,8 +194,8 @@ a {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
-  margin-left: 252px;
-  margin-right: 252px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button {
@@ -224,38 +226,9 @@ a {
   text-align: left;
 }
 
-.container-title > li {
-  width: calc((100%- (3 * 30px)) / 4);
-}
-
 .container-title > li:not(:last-child) {
   margin-right: 30px;
 }
-
-.section-title {
-  color: var(--secondary-text-color);
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  width: 270px;
-}
-
-.section-text {
-  color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  width: 270px;
-}
-
 .section-work {
   color: var(--secondary-text-color);
   font-family: Roboto, sans-serif;
@@ -268,17 +241,33 @@ a {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.section-title {
+  color: var(--secondary-text-color);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: 270px;
+}
+
+.section-text {
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  width: 270px;
+}
+
 .section-images {
   padding-bottom: 94px;
-}
-.section-team {
-  background-color: var(--background-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.container-list,
-.container-list-team {
-  display: flex;
 }
 
 .images-title {
@@ -287,10 +276,27 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.section-team {
+  background-color: var(--background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.cards {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container-list,
+.container-list-team {
+  display: flex;
 }
 
 .container-list > li:not(:last-child) {
@@ -305,7 +311,7 @@ a {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  padding-top: 30px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -315,10 +321,9 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   margin-top: 0;
-  padding-bottom: 30px;
 }
 
 .team-items {
@@ -348,6 +353,8 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .main-nav .link:hover,
@@ -377,6 +384,10 @@ a {
   letter-spacing: 0.03em;
   border: 0;
   padding: 6px 22px;
+}
+
+.projects-list:not(:last-child) {
+  margin-right: 8px;
 }
 
 .part .button:hover,
@@ -437,14 +448,12 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.72;
   letter-spacing: 0.03em;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-link {
-  margin-bottom: 9px;
-}
+
 .footer-wrapper {
   text-align: left;
 }
@@ -454,13 +463,17 @@ a {
   margin-bottom: 20px;
 }
 
+.item-address {
+  margin-bottom: 9px;
+}
+
 .address .link {
   color: var(--secondary-accent-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.72;
   letter-spacing: 0.03em;
 }
 
@@ -477,10 +490,7 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.72;
   letter-spacing: 0.03em;
   margin-bottom: 9px;
-}
-.tel-link {
-  margin-bottom: 60px;
 }
